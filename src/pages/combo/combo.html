@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>ANTOJATE</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+    <h3>Menú</h3>
+    <ion-card *ngFor="let combo of combos" class="card-background-page">
+        <img [src]="combo.image_url"/>
+        <div class="card-title"> {{combo.name}}</div>
+        <div class="card-subtitle" [innerHTML]="combo.description"></div>
+    </ion-card>
+</ion-content>
